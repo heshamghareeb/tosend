@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="static/main0.css" />
+  <title>messages</title>
+</head>
+<body>
+
+{% for p in posts %}
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.name}}
+    </div>
+    <div class="post-title">
+      {{p.email}}
+    </div>
+    <div class="post-date">
+      {{p.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+  <div class="post-content">
+    {{p.comment}}
+  </div>
+</div>
+{% endfor %}
+</body>
+</html>

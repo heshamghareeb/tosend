@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/css/main0.css" />
+  <title>messages</title>
+</head>
+<body>
+<a class="login-area" href="/logout">logout</a>
+<h1>messages</h1>
+{% for p in posts %}
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.name}}
+    </div>
+    <div class="post-title">
+      {{p.email}}
+    </div>
+<!--     <div class="post-date">
+      {{p.created}}    .strftime("%b %d, %Y") 
+    </div> -->
+  </div>
+  <div class="post-content" id="main">
+    {{p.comment}}
+  </div>
+    <div class="post-content" id="main">
+    {{p.id}}
+  </div>
+</div>
+{% endfor %}
+</body>
+</html>
